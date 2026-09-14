@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -404,4 +404,501 @@
   </script>
 
 </body>
+</html> -->
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta
+    name="description"
+    content="Calculadora de planejamento financeiro"
+  >
+
+  <title>Planejamento Financeiro</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #17202a;
+    }
+
+    .container {
+      width: min(680px, 100%);
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .subtitle {
+      margin: 0 0 24px;
+      color: #667085;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #d0d5dd;
+      border-radius: 12px;
+      font-size: 20px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #344054;
+    }
+
+    .results {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      border-radius: 12px;
+      background: #f8fafc;
+    }
+
+    .label {
+      font-weight: 700;
+    }
+
+    .value {
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .goal {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 14px;
+      background: #eef2ff;
+    }
+
+    .goal strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .note {
+      margin-top: 18px;
+      color: #667085;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 18px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .item {
+        padding: 14px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <main class="container">
+
+```
+<section class="card">
+
+  <h1>💰 Planejamento Financeiro</h1>
+
+  <p class="subtitle">
+    Digite o valor recebido para saber quanto separar
+    para cada objetivo.
+  </p>
+
+  <label for="salario">
+    Valor recebido
+  </label>
+
+  <input
+    id="salario"
+    type="text"
+    inputmode="numeric"
+    autocomplete="off"
+    placeholder="R$ 0,00"
+    aria-label="Valor recebido"
+  >
+
+  <div class="results">
+
+    <div class="item">
+      <span class="label">
+        🏠 Gastos essenciais (50%)
+      </span>
+
+      <span
+        class="value"
+        id="essenciais"
+      >
+        R$ 0,00
+      </span>
+    </div>
+
+    <div class="item">
+      <span class="label">
+        📈 Investimentos (20%)
+      </span>
+
+      <span
+        class="value"
+        id="investimento"
+      >
+        R$ 0,00
+      </span>
+    </div>
+
+    <div class="item">
+      <span class="label">
+        🎮 Lazer (20%)
+      </span>
+
+      <span
+        class="value"
+        id="lazer"
+      >
+        R$ 0,00
+      </span>
+    </div>
+
+    <div class="item">
+      <span class="label">
+        🎯 Objetivos (10%)
+      </span>
+
+      <span
+        class="value"
+        id="objetivos"
+      >
+        R$ 0,00
+      </span>
+    </div>
+
+    <div class="item">
+      <span class="label">
+        🛡️ Reserva de emergência (6 salários)
+      </span>
+
+      <span
+        class="value"
+        id="reserva"
+      >
+        R$ 0,00
+      </span>
+    </div>
+
+    <div class="item">
+      <span class="label">
+        💰 Meta de patrimônio (93×)
+      </span>
+
+      <span
+        class="value"
+        id="patrimonio"
+      >
+        R$ 0,00
+      </span>
+    </div>
+
+  </div>
+
+  <div class="goal">
+
+    <strong>
+      🎯 Organização do dinheiro
+    </strong>
+
+    O valor recebido é dividido automaticamente entre
+    necessidades, investimentos, lazer e objetivos.
+
+    <br><br>
+
+    <strong>
+      🏠 Gastos essenciais
+    </strong>
+
+    Contas, mercado, transporte, escola e outras despesas
+    necessárias.
+
+    <br><br>
+
+    <strong>
+      🎮 Lazer
+    </strong>
+
+    Dinheiro disponível para gastar sem precisar usar
+    investimentos ou reservas.
+
+    <br><br>
+
+    <strong>
+      🎯 Objetivos
+    </strong>
+
+    Dinheiro para acumular e usar futuramente em viagens,
+    presentes, compras planejadas ou outros objetivos.
+
+  </div>
+
+  <p class="note">
+    A meta de patrimônio utiliza a regra pessoal de 93×
+    o valor informado. Os cálculos são feitos localmente
+    no navegador e nenhum dado é enviado para um servidor.
+  </p>
+
+</section>
+```
+
+  </main>
+
+  <script>
+    "use strict";
+
+
+    /*
+     * Regras do planejamento.
+     *
+     * Centralizadas aqui para facilitar futuras alterações.
+     */
+
+    const REGRAS = {
+      essenciais: 0.50,
+      investimento: 0.20,
+      lazer: 0.20,
+      objetivos: 0.10,
+      reserva: 6,
+      patrimonio: 93
+    };
+
+
+    const salarioInput =
+      document.getElementById("salario");
+
+
+    const elements = {
+      essenciais:
+        document.getElementById("essenciais"),
+
+      investimento:
+        document.getElementById("investimento"),
+
+      lazer:
+        document.getElementById("lazer"),
+
+      objetivos:
+        document.getElementById("objetivos"),
+
+      reserva:
+        document.getElementById("reserva"),
+
+      patrimonio:
+        document.getElementById("patrimonio")
+    };
+
+
+    function formatarMoeda(valor) {
+
+      if (
+        !Number.isFinite(valor) ||
+        valor <= 0
+      ) {
+        return "R$ 0,00";
+      }
+
+      return valor.toLocaleString(
+        "pt-BR",
+        {
+          style: "currency",
+          currency: "BRL"
+        }
+      );
+    }
+
+
+    function obterValorNumerico(valor) {
+
+      if (!valor) {
+        return 0;
+      }
+
+      const numeros =
+        valor.replace(/\D/g, "");
+
+      if (!numeros) {
+        return 0;
+      }
+
+      const numero =
+        Number(numeros) / 100;
+
+
+      /*
+       * Proteção contra valores inválidos
+       * ou excessivamente grandes.
+       */
+
+      if (
+        !Number.isFinite(numero) ||
+        numero > 999999999
+      ) {
+        return 0;
+      }
+
+      return numero;
+    }
+
+
+    function mascararDinheiro(valor) {
+
+      const numero =
+        obterValorNumerico(valor);
+
+      if (numero === 0) {
+        return "";
+      }
+
+      return formatarMoeda(numero);
+    }
+
+
+    function limparResultados() {
+
+      Object.values(elements).forEach(
+        element => {
+
+          element.textContent =
+            "R$ 0,00";
+
+        }
+      );
+    }
+
+
+    function calcular() {
+
+      const valor =
+        obterValorNumerico(
+          salarioInput.value
+        );
+
+
+      if (
+        !Number.isFinite(valor) ||
+        valor <= 0
+      ) {
+        limparResultados();
+        return;
+      }
+
+
+      const essenciais =
+        valor * REGRAS.essenciais;
+
+      const investimento =
+        valor * REGRAS.investimento;
+
+      const lazer =
+        valor * REGRAS.lazer;
+
+      const objetivos =
+        valor * REGRAS.objetivos;
+
+      const reserva =
+        valor * REGRAS.reserva;
+
+      const patrimonio =
+        valor * REGRAS.patrimonio;
+
+
+      elements.essenciais.textContent =
+        formatarMoeda(essenciais);
+
+      elements.investimento.textContent =
+        formatarMoeda(investimento);
+
+      elements.lazer.textContent =
+        formatarMoeda(lazer);
+
+      elements.objetivos.textContent =
+        formatarMoeda(objetivos);
+
+      elements.reserva.textContent =
+        formatarMoeda(reserva);
+
+      elements.patrimonio.textContent =
+        formatarMoeda(patrimonio);
+    }
+
+
+    salarioInput.addEventListener(
+      "input",
+      function () {
+
+        salarioInput.value =
+          mascararDinheiro(
+            salarioInput.value
+          );
+
+        calcular();
+
+      }
+    );
+
+
+    /*
+     * Campo começa vazio.
+     */
+
+    salarioInput.value = "";
+
+    limparResultados();
+
+  </script>
+
+</body>
 </html>
+
